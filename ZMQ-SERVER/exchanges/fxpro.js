@@ -47,7 +47,7 @@ module.exports = {
         _.each(this.markers, function(symbols) {
 
             if (utils.getSymbolExchangePort(symbols) > 0) {
-
+                console.log("subscribeExchange", 'tcp://' + server + ':' + port_prefix + utils.getSymbolExchangePort(symbols) + '');
                 this.symbolZMQ[symbols] = zmq.socket('sub');
                 this.symbolZMQ[symbols].connect('tcp://' + server + ':' + port_prefix + utils.getSymbolExchangePort(symbols) + '');
                 this.symbolZMQ[symbols].subscribe('');

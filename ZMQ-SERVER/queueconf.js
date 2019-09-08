@@ -1,7 +1,7 @@
 module.exports = {
     zeromq : {
             enabled: true,
-            host: "35.224.193.229",
+            host: "127.0.0.1",
             port: 2626
     },
     kafka : {
