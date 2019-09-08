@@ -29,6 +29,7 @@ module.exports = {
     },
 
     kafkaConnect: function() {
+        console.log('kafkaConnect');
         this.client = new kafka.Client(queueconf.kafka.zookeeper_host + ":" + queueconf.kafka.zookeeper_port)
         this.producer = new Producer(this.client)
     },
