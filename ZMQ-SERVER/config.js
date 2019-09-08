@@ -9,7 +9,7 @@ module.exports = {
             execution_server: '76.9.21.100',
             port_prefix: 20,
             debug: true,
-            symbols: ['EURUSD', 'USDJPY', 'GBPUSD', 'USDCHF', 'EURGBP', 'EURJPY', 'EURCHF', 'AUDUSD', 'USDCAD', 'NZDUSD']
+            symbols: ['EURUSD', 'USDJPY', 'GBPUSD', 'USDCHF', 'EURGBP', 'EURJPY', 'EURCHF', 'AUDUSD', 'USDCAD', 'NZDUSD', 'BTGUSDT']
         },
         'fxpro' : {
             name: 'fxpro',
