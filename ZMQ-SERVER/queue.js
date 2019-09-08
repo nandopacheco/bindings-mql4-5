@@ -42,6 +42,7 @@ module.exports = {
                 channel: channel,
                 message: data
             }
+            console.log(data)
 
             pubnub.publish(publishConfig, function(status, response) {
                 console.log(status, response);
@@ -62,6 +63,7 @@ module.exports = {
                      messages: data,
                     partition: 0
                 }];
+                console.log(data)
 
                 this.producer.send(payloads, function(err) {
                     if (err) {
