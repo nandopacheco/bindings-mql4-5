@@ -2,7 +2,7 @@ module.exports = {
     exchanges : {
         'xm' : {
             name: 'xm',
-            enabled: true,
+            enabled: false,
             fee : 0.2 / 100, //
             currencies : ['USD'],
             pricing_server: '76.9.21.100',
