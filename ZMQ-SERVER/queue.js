@@ -19,7 +19,7 @@ module.exports = {
 
         if (queueconf.zeromq.enabled) {
             responder.bind('tcp://' + queueconf.zeromq.host + ':' + queueconf.zeromq.port, function(err) {
-                console.log("Listeninnnng", queueconf.zeromq.host, queueconf.zeromq.port)
+                console.log("Listening")
             })
         }
 
@@ -29,7 +29,6 @@ module.exports = {
     },
 
     kafkaConnect: function() {
-        console.log('kafkaConnect');
         this.client = new kafka.Client(queueconf.kafka.zookeeper_host + ":" + queueconf.kafka.zookeeper_port)
         this.producer = new Producer(this.client)
     },
@@ -42,7 +41,6 @@ module.exports = {
                 channel: channel,
                 message: data
             }
-            console.log(data)
 
             pubnub.publish(publishConfig, function(status, response) {
                 console.log(status, response);
@@ -59,11 +57,10 @@ module.exports = {
             if (typeof data === 'object') {
                 var payloads = [{
                     topic: channel,
-                    // messages: JSON.stringify(data),
-                     messages: data,
+                    messages: JSON.stringify(data),
+                    //  messages: data,
                     partition: 0
                 }];
-                console.log(data)
 
                 this.producer.send(payloads, function(err) {
                     if (err) {

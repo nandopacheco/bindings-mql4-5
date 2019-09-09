@@ -19,8 +19,8 @@ module.exports = {
         var selected = 0;
 
         switch (symbol) {
-            case 'BTGUSDT':
-                selected = '88';
+            case 'AUDCAD':
+                selected = '02';
                 break;
             case 'AUDCHF':
                 selected = '03';

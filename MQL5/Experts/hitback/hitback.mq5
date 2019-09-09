@@ -53,8 +53,138 @@ string serverAdress(string symbol_received)
   {
      string str = "";
 
-      if( "BTCUSDT" == symbol_received ) {
-         str=ip_adress+":"+prefixPort+"88";
+      if( "AUDCAD" == symbol_received ) {
+         str=ip_adress+":"+prefixPort+"02";
+         return str;
+      }
+         
+      if( "AUDCHF" == symbol_received ) {
+         str=ip_adress+":"+prefixPort+"03";
+         return str;
+      }
+
+      if( "EURUSD" == symbol_received ) {
+         str=ip_adress+":"+prefixPort+"04";
+         return str;
+      }
+         
+      if( "AUDJPY" == symbol_received  ) {
+         str=ip_adress+":"+prefixPort+"05";
+         return str;
+      }
+
+      if( "AUDNZD" == symbol_received  ) {
+         str=ip_adress+":"+prefixPort+"06";
+         return str;
+      }
+
+      if( "CADCHF" == symbol_received ) {
+         str=ip_adress+":"+prefixPort+"07";
+         return str;
+      }
+
+      if( "CADJPY" == symbol_received ) {
+         str=ip_adress+":"+prefixPort+"08";
+         return str;
+      }
+         
+      if( "CHFJPY" == symbol_received ) {
+         str=ip_adress+":"+prefixPort+"09";
+         return str;
+      }
+
+      if( "EURAUD" == symbol_received ) {
+         str=ip_adress+":"+prefixPort+"10";
+         return str;
+      }
+         
+      if( "EURCAD" == symbol_received ) {
+         str=ip_adress+":"+prefixPort+"11";
+         return str;
+      }
+
+      if( "EURCHF" == symbol_received ) {
+         str=ip_adress+":"+prefixPort+"12";
+         return str;
+      }
+         
+      if( "EURGBP" == symbol_received ) {
+         str=ip_adress+":"+prefixPort+"13";
+         return str;
+      }
+
+      if( "GBPAUD" == symbol_received  ) {
+         str=ip_adress+":"+prefixPort+"14";
+         return str;
+      }
+         
+      if( "GBPCAD" == symbol_received ) {
+         str=ip_adress+":"+prefixPort+"15";
+         return str;
+      }
+
+      if( "GBPCHF" == symbol_received ) {
+         str=ip_adress+":"+prefixPort+"16";
+         return str;
+      }
+         
+      if( "GBPJPY" == symbol_received  ) {
+         str=ip_adress+":"+prefixPort+"17";
+         return str;
+      }
+
+      if( "GBPNZD" == symbol_received  ) {
+         str=ip_adress+":"+prefixPort+"18";
+         return str;
+      }
+
+      if( "NZDCHF" == symbol_received  ) {
+         str=ip_adress+":"+prefixPort+"19";
+         return str;
+      }
+         
+      if( "NZDJPY" == symbol_received  ) {
+         str=ip_adress+":"+prefixPort+"20";
+         return str;
+      }
+         
+      if( "NZDUSD" == symbol_received ) {
+         str=ip_adress+":"+prefixPort+"21";
+         return str;
+      }
+
+      if( "EURNZD" == symbol_received) {
+         str=ip_adress+":"+prefixPort+"22";
+         return str;
+      }
+
+      if( "USDCAD" == symbol_received ) {
+         str=ip_adress+":"+prefixPort+"23";
+         return str;
+      }
+         
+      if( "EURJPY" == symbol_received ) {
+         str=ip_adress+":"+prefixPort+"24";
+         return str;
+      }
+         
+      if( "AUDUSD" == symbol_received ) {
+         str=ip_adress+":"+prefixPort+"25";
+         return str;
+      }
+
+      if( "GBPUSD" == symbol_received ) {
+         str=ip_adress+":"+prefixPort+"26";
+         return str;
+      }
+
+      if( "USDCHF" == symbol_received ) {
+         str=ip_adress+":"+prefixPort+"27";
+         return str;
+      }
+         
+      if( "USDJPY" == symbol_received ) {
+         str=ip_adress+":"+prefixPort+"28";
          return str;
       }
       
