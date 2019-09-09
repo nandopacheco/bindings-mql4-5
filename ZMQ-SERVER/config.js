@@ -20,7 +20,7 @@ module.exports = {
             execution_server: '35.224.193.229',
             port_prefix: 20,
             debug: true,
-            symbols: ['EURUSD', 'USDJPY', 'GBPUSD', 'USDCHF', 'EURGBP', 'EURJPY', 'EURCHF', 'AUDUSD', 'USDCAD', 'NZDUSD', 'BTGUSDT']
+            symbols: ['BTGUSDT']
         }
     }
 };
