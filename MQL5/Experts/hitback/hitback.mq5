@@ -218,7 +218,7 @@ void OnBookEvent(const string &symbol)
          //   }
          
           // ZMQ send msg
-            string msg = CreateSuccessResponse("book", [{teste:'aaa']);  
+            string msg = "fgfgf";
             ZmqMsg request(msg);
             socket.send(request);
          
@@ -226,7 +226,7 @@ void OnBookEvent(const string &symbol)
      }
   }
 
-string CreateSuccessResponse(string responseName, JSONValue* responseBody)
+string CreateSuccessResponse(string responseName)
 {
    // JSONObject *joResponse = new JSONObject();
    // joResponse.put("ErrorCode", new JSONString("0"));
@@ -237,7 +237,7 @@ string CreateSuccessResponse(string responseName, JSONValue* responseBody)
    // }
    
    string result = "sssss";   
-   delete joResponse;   
+  // delete joResponse;   
    return result;
 }
 
@@ -265,7 +265,8 @@ void SendTickData()
       //  jo.put("volume", new JSONNumber(last_tick.volume));
          
         // ZMQ send msg
-        string msg = CreateSuccessResponse("tick", {});  
+        string msg = "tick";
+        Print("tick");
         ZmqMsg request(msg);
         socket.send(request);
         
