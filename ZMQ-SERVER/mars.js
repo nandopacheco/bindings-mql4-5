@@ -38,7 +38,7 @@ module.exports = {
     },
 
     sendMessage: function(message) {
-
+        console.log(message)
         queue.publishToQueue("forex", message)
     },
 
