@@ -34,6 +34,7 @@ module.exports = {
 
     bindEvents: function() {
         _.bindAll(this, 'sendMessage')
+        console.log("bindEvents")
         emitter.on('sendMessage', this.sendMessage)
     },
 
