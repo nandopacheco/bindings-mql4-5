@@ -53,12 +53,12 @@ module.exports = {
 
         // KAFKA PUBLISH
         if (queueconf.kafka.enabled) {
-
+            console.log(data)
             if (typeof data === 'object') {
                 var payloads = [{
                     topic: channel,
-                    messages: JSON.stringify(data),
-                    //  messages: data,
+                    // messages: JSON.stringify(data),
+                     messages: data,
                     partition: 0
                 }];
 

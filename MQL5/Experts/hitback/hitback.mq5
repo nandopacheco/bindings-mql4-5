@@ -11,10 +11,10 @@
 //--- Include a class of the Standard Library
 #include <Trade/Trade.mqh>
 #include <Zmq/Zmq.mqh>
-#include <json.mqh>
+// #include <json.mqh>
 
 string currency = Symbol();
-extern string ip_adress = "*";
+extern string ip_adress = "34.70.151.26";
 extern string prefixPort = "20";
 
 // ZMQ
@@ -208,17 +208,17 @@ void OnBookEvent(const string &symbol)
       if(MarketBookGet(_Symbol,last_bookArray))
         {
         
-         JSONArray* jaTicks = new JSONArray();
+         // JSONArray* jaTicks = new JSONArray();
 
-         //--- process book data
-         for(int idx=0;idx<ArraySize(last_bookArray);idx++)
-           {
-            MqlBookInfo curr_info=last_bookArray[idx];
-             jaTicks.put(idx, Serialize(last_bookArray[idx]));
-           }
+         // //--- process book data
+         // for(int idx=0;idx<ArraySize(last_bookArray);idx++)
+         //   {
+         //    MqlBookInfo curr_info=last_bookArray[idx];
+         //     jaTicks.put(idx, Serialize(last_bookArray[idx]));
+         //   }
          
           // ZMQ send msg
-            string msg = CreateSuccessResponse("book", jaTicks);  
+            string msg = CreateSuccessResponse("book", [{teste:'aaa']);  
             ZmqMsg request(msg);
             socket.send(request);
          
@@ -228,27 +228,27 @@ void OnBookEvent(const string &symbol)
 
 string CreateSuccessResponse(string responseName, JSONValue* responseBody)
 {
-   JSONObject *joResponse = new JSONObject();
-   joResponse.put("ErrorCode", new JSONString("0"));
+   // JSONObject *joResponse = new JSONObject();
+   // joResponse.put("ErrorCode", new JSONString("0"));
       
-   if (responseBody != NULL)
-   {
-      joResponse.put(responseName, responseBody);   
-   }
+   // if (responseBody != NULL)
+   // {
+   //    joResponse.put(responseName, responseBody);   
+   // }
    
-   string result = joResponse.toString();   
+   string result = "sssss";   
    delete joResponse;   
    return result;
 }
 
-JSONObject* Serialize(MqlBookInfo& tick)
-{
-    JSONObject *jo = new JSONObject();
-    jo.put("type", new JSONString(tick.type));
-    jo.put("price", new JSONNumber(tick.price));
-    jo.put("volume", new JSONNumber(tick.volume));
-    return jo;
-}
+// JSONObject* Serialize(MqlBookInfo& tick)
+// {
+//     JSONObject *jo = new JSONObject();
+//     jo.put("type", new JSONString(tick.type));
+//     jo.put("price", new JSONNumber(tick.price));
+//     jo.put("volume", new JSONNumber(tick.volume));
+//     return jo;
+// }
 
 void SendTickData()
 {
@@ -257,15 +257,15 @@ void SendTickData()
    if(SymbolInfoTick(currency,last_tick))
      {
 
-       JSONObject *jo = new JSONObject();
-       jo.put("time", new JSONNumber(last_tick.time));
-       jo.put("bid", new JSONNumber(last_tick.bid));
-       jo.put("ask", new JSONNumber(last_tick.ask));
-       jo.put("last", new JSONNumber(last_tick.last));
-       jo.put("volume", new JSONNumber(last_tick.volume));
+      //  JSONObject *jo = new JSONObject();
+      //  jo.put("time", new JSONNumber(last_tick.time));
+      //  jo.put("bid", new JSONNumber(last_tick.bid));
+      //  jo.put("ask", new JSONNumber(last_tick.ask));
+      //  jo.put("last", new JSONNumber(last_tick.last));
+      //  jo.put("volume", new JSONNumber(last_tick.volume));
          
         // ZMQ send msg
-        string msg = CreateSuccessResponse("tick", jo);  
+        string msg = CreateSuccessResponse("tick", {});  
         ZmqMsg request(msg);
         socket.send(request);
         
