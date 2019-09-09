@@ -19,7 +19,7 @@ module.exports = {
 
         if (queueconf.zeromq.enabled) {
             responder.bind('tcp://' + queueconf.zeromq.host + ':' + queueconf.zeromq.port, function(err) {
-                console.log("Listening")
+                console.log("Listening: ", 'tcp://' + queueconf.zeromq.host + ':' + queueconf.zeromq.port)
             })
         }
 
