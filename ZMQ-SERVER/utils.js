@@ -20,7 +20,7 @@ module.exports = {
 
         switch (symbol) {
             case 'BTGUSDT':
-                selected = '99';
+                selected = '88';
                 break;
             case 'AUDCHF':
                 selected = '03';
