@@ -35,6 +35,7 @@ module.exports = {
 
     publishToQueue: function(channel, data) {
 
+        console.log(data)
         // PUBNUB PUBLISH
         if (queueconf.zeromq.pubnub) {
             var publishConfig = {
